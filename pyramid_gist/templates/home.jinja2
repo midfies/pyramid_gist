@@ -1,0 +1,15 @@
+{% extends "layout.jinja2" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<h1>Home</h1>
+    {% if this_user %}
+        <ul>
+            <li>Welcome {{this_user.first_name}}</li>
+        </ul>
+
+    {%endif%}
+
+
+{% endblock %}

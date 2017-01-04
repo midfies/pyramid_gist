@@ -1,0 +1,38 @@
+{% extends "layout.jinja2" %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+<h1>Register</h1>
+<form method="POST">
+    <input type="hidden" name="csrf_token" value="{{ request.session.get_csrf_token() }}" />
+    <p>
+        <label for="username">Username: </label>
+        <input type="text" name="username" />
+    </p>
+    <p>
+        <label for="password">Password: </label>
+        <input type="password" name="password" />
+    </p>
+    <p>
+        <label for="email">Email: </label>
+        <input type="text" name="email" />
+    </p>
+    <p>
+        <label for="first_name">First Name: </label>
+        <input type="text" name="first_name" />
+    </p>
+    <p>
+        <label for="last_name">Last Name: </label>
+        <input type="text" name="last_name" />
+    </p>
+    <p>
+        <label for="fav_food">Favorite Food: </label>
+        <input type="text" name="fav_food" />
+    </p>
+    <p>
+        <input type="submit" name="login" />
+    </p>
+</form>
+
+{% endblock %}
